@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="alumno" class="es.studium.SpringAcademia.Alumno">
+		<property name="nombreAlumno" value="Ana Abel"></property>
+		<property name="direccionAlumno" value="Paseo de América, 15"></property>
+		<property name="numMatricula" value="1"></property>
+		<property name="centroAlumno"><ref bean="centro" />
+		</property>
+		<property name="asignatura"><ref bean="asignaturaP" />
+		</property>
+	</bean>
+	
+	<bean id="asignaturaP" class="es.studium.SpringAcademia.Asignatura">
+		<property name="nombreAsig" value="Inglés B1"></property>
+		<property name="horasAsig" value="1"></property>
+		<property name="nota" value="7"></property>
+		<property name="codeAsig" value="1"></property>		
+	</bean>
+	
+	<bean id="centro" class="es.studium.SpringAcademia.Centro">
+		<property name="nombreCentro" value="Escuela de inglés "></property>
+		<property name="direccionCentro" value="Reyes Católicos, 14"></property>
+		<property name="codigoCentro" value="1"></property>
+		<property name="alumnoCentro">
+			<list>
+				<ref bean="alumno" />
+			</list>
+		</property>
+	</bean>
+</beans>
