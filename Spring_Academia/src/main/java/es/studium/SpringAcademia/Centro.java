@@ -70,16 +70,8 @@ public class Centro
 		return alumnoCentro;
 	}
 
-
 	public void setAlumnoCentro(List<Alumno> alumnoCentro)
 	{
 		this.alumnoCentro = alumnoCentro;
 	}
-
-	//Método toString
-	/*
-	public String toString()
-	{
-		return "Nombre del Centro:" + nombreCentro + ", Dirección del Centro=" + direccionCentro;
-	}*/
 }
